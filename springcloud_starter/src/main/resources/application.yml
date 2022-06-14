@@ -1,0 +1,19 @@
+server:
+  port: 8901
+
+spring:
+  application:
+    name: spring-cloud-eureka
+
+eureka:
+  instance:
+    hostname: 12.0.0.1
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8901/eureka
+    register-with-eureka:  false #不向eureka注册自己
+    fetch-registry: false #不向eureka server获取服务列表
+  server:
+    enable-self-preservation: false
+
+
